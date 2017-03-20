@@ -1,0 +1,54 @@
+html {
+	
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	min-height: 768px;
+	background: #eee;
+	font-family: Lato;
+	font-size: 16px;
+}
+
+.window {
+	position: absolute;
+	left: 50%;
+	width: 1024px;
+	height: 768px;
+	overflow: hidden;
+	margin-left: -513px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-image: url(../../assets/img/background.png);
+	background-size: 100%;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		// background: rgba(255,255,255,0.5);
+		// background: rgba(0,0,0,0.15);
+	}
+}
+
+.main {
+
+	> .inner {
+		position: relative;
+		z-index: 1;
+		min-height: 618px;
+		padding: 75px 25px 75px 25px;
+	}
+}
+
+.none {
+	display: none;
+}
+

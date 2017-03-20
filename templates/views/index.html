@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ATM Prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="../../assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body class="layout-left" onload="startTime()">
+    <div class="window">
+        
+        <div class="header">
+            
+             <div class="logo"><i class="fa fa-bank"></i> Bank</div>
+
+            <div class="menu">
+                <div class="inner">
+                    <label class="first"><i class="fa fa-heart"></i> Hello, Phelipe</label>
+                    <label class="last"><i class="fa fa-clock-o"></i> <span id="clock"></span></label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="inner">
+
+                <div id="touchid" class="panel-wrap touchid">
+                    <div class="default">
+                        <div class="panel"><div class="inner"><a href="#queued" data-img="background3"><i class="fa fa-dot-circle-o"></i><label>TouchID <span>or Enter PIN</span></label><input type="password" maxlength="4" autofocus/></a></div></div>
+                    </div>
+                </div>
+
+                 <div id="queued" class="panel-wrap queued none">
+                    <div class="default">
+                        <div class="panel first"><div class="inner"><a href="#queued-trans" data-img="background3"><i class="fa fa-spinner"></i><label>Queued <span>transactions</span></label></a></div></div>
+                        <div class="panel last"><div class="inner"><a href="#mainmenu" data-img="background2"><i class="fa fa-bars"></i><label>Continue <i class="fa fa-chevron-right"></i><span>Mainmenu</span></label></a></div></div>
+                    </div>
+                </div>
+
+                <div id="queued-trans" class="panel-wrap queued-trans none">
+                    <div class="default">
+                         <div class="panel first"><div class="inner"><i>$60</i><label>Fast Cash <i class="fa fa-laptop"></i><span id="ago-A"></span></label></div></div>
+                         <div class="panel"><div class="inner"><i>$200</i><label>Fast Cash <i class="fa fa-mobile"></i><span id="ago-B"></span></label></div></div>
+                        <div class="panel last"><div class="inner"><i class="fa fa-dollar"></i><label>Morgage <i class="fa fa-mobile"></i><span>Pay $1,178</span></label></div></div>
+                    </div>
+                </div>
+                
+                <div id="mainmenu" class="panel-wrap mainmenu none">
+                    <div class="primary">
+                        <div class="default">
+                            <div class="panel first">
+                                <div class="inner">
+                                    <i>$60</i><label>Fast Cash <i class="fa fa-chevron-right"></i></label>
+                                    <div class="unavailable none">
+                                        <div class="inner"><i class="fa fa-frown-o"></i><label>Unavailable<span>Service</span></label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel"><div class="inner"><i class="fa fa-money"></i><label>Withdraw <i class="fa fa-chevron-right"></i></label></div></div>
+                            <div class="panel last"><div class="inner"><i class="fa fa-arrow-circle-o-right"></i><label>Transfer <i class="fa fa-chevron-right"></i></label></div></div>
+                            <div class="panel last"><div class="inner"><i class="fa fa-credit-card"></i><label>Deposit <i class="fa fa-chevron-right"></i></label></div></div>
+                        </div>
+                        <div class="mini">
+                             <div class="panel first"><div class="inner"><i class="fa fa-user"></i><label>Accounts <span>View All</span></label></div></div>
+                            <div class="panel last"><div class="inner"><i class="fa fa-gear"></i><label>Preferances <span>User Settings</span></label></div></div>
+                        </div>
+                    </div>
+                    <div class="secondary">
+                       <div class="mini">
+                             <div class="panel first"><div class="inner"><i class="fa fa-star"></i><label>Favorites <span>Options</span></label></div></div>
+                             <div class="panel"><div class="inner"><a href="#paybills" data-img="background3"><i class="fa fa-dollar"></i><label>Pay Bills <span>Schedule Payments</span></label></a></div></div>
+                            <div class="panel"><div class="inner"><i class="fa fa-file-text-o"></i><label>Print Transactions <span>History & more...</span></label></div></div>
+                            <div class="panel last"><div class="inner"><i class="fa fa-th"></i><label>Change PIN <span>security</span></label></div></div>
+                        </div>
+                        <div class="mini">
+                             <div class="panel first last special"><div class="inner"><i class="fa fa-info"></i><label>Customer Service <span>1 (800) 123-4567</span></label></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="paybills" class="panel-wrap paybills none">
+                    <div class="keyboard-wrap">
+                        <div class="keyboard-input">
+                            <div class="form-item">
+                                <input type="text" placeholder="Add Payee"/>
+                            </div>
+                        </div>
+                        <div class="keyboard">
+                            <div class="row first">
+                                <div class="key first"><div class="inner" id="key1">q</div></div>
+                                <div class="key"><div class="inner" id="key2">w</div></div>
+                                <div class="key"><div class="inner" id="key3">e</div></div>
+                                <div class="key"><div class="inner" id="key4">r</div></div>
+                                <div class="key"><div class="inner" id="key5">t</div></div>
+                                <div class="key"><div class="inner" id="key6">y</div></div>
+                                <div class="key"><div class="inner" id="key7">u</div></div>
+                                <div class="key"><div class="inner" id="key8">i</div></div>
+                                <div class="key"><div class="inner" id="key9">o</div></div>
+                                <div class="key last"><div class="inner" id="key0">p</div></div>
+                            </div>
+                            <div class="row second">
+                                <div class="key first"><div class="inner" id="key1">a</div></div>
+                                <div class="key"><div class="inner" id="key2">s</div></div>
+                                <div class="key"><div class="inner" id="key3">d</div></div>
+                                <div class="key"><div class="inner" id="key4">f</div></div>
+                                <div class="key"><div class="inner" id="key5">g</div></div>
+                                <div class="key"><div class="inner" id="key6">h</div></div>
+                                <div class="key"><div class="inner" id="key7">j</div></div>
+                                <div class="key"><div class="inner" id="key8">k</div></div>
+                                <div class="key last"><div class="inner" id="key9">l</div></div>
+                            </div>
+                            <div class="row third">
+                                <div class="key first"><div class="inner" id="key1">z</div></div>
+                                <div class="key"><div class="inner" id="key2">x</div></div>
+                                <div class="key"><div class="inner" id="key3">c</div></div>
+                                <div class="key"><div class="inner" id="key4">v</div></div>
+                                <div class="key"><div class="inner" id="key5">b</div></div>
+                                <div class="key"><div class="inner" id="key6">n</div></div>
+                                <div class="key"><div class="inner" id="key7">m</div></div>
+                                <div class="key"><div class="inner" id="key8">,</div></div>
+                                <div class="key last"><div class="inner" id="key9">.</div></div>
+                            </div>
+                            <div class="row fourth">
+                                <div class="key first last space"><div class="inner" id="key9">Space</div></div>
+                            </div>
+                    </div>
+                </div>
+                    </div>
+        </div>
+
+        <div class="menubar none">
+            <div class="inner">
+                <button class="home"><i class="fa fa-home"></i></button>
+                <button class="next">Continue <i class="fa fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+    <script src="../../assets/js/jquery-2.1.4.min.js"></script>
+    <!-- <script src="../../assets/js/moment-with-locales.js"></script> -->
+    <script src="../../assets/js/scripts.js"></script>
+   <!--  <script>
+
+
+        var momentA = moment().subtract(7, 'minutes');
+        var dateA = momentA.fromNow();
+
+        var momentB = moment().subtract(45, 'minutes');
+        var dateB = momentB.fromNow();
+
+        console.log(dateA);
+        console.log(dateB);
+
+        $('#ago-A').text(dateA);
+        $('#ago-B').text(dateB);
+
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML =
+            h + ":" + m + ":" + s;
+            document.getElementById('ago1').innerHTML =
+            "- 00:" + m + ":" + s;
+             document.getElementById('ago2').innerHTML =
+            "- 01:" + h + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  
+            return i;
+        }
+    </script> -->
+
+
+</html>

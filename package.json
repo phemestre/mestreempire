@@ -1,0 +1,34 @@
+{
+  "name": "mestreempire",
+  "version": "1.0.0",
+  "description": "Mestre Empire Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phemestre/mestreempire.git"
+  },
+  "keywords": [
+    "mestre",
+    "theme"
+  ],
+  "author": "Brian Milner",
+  "license": "©Copyright NCR Corp",
+  "bugs": {
+    "url": "https://github.com/phemestre/mestreempire.git/issues"
+  },
+  "homepage": "https://github.com/phemestre/mestreempire.git",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5",
+    "sassdoc": "^2.1.18",
+    "susy":"^2.2.9",
+    "fsevents": "^0.3.7"
+  }
+}
