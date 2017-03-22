@@ -1,0 +1,46 @@
+
+.sidebar {
+	input,
+	.btn {
+		width: 100%;
+		margin: 5px 0;
+	}
+	
+	ul.list {
+		margin: 0;
+		padding: 0 0 20px 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			border-bottom: 1px solid #ccc;
+			font-size: 14px;
+			line-height: 40px;
+			@include container();
+
+			a {
+				display: block;
+				text-decoration: none;
+			}
+
+			span {
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: 16px;
+				font-family: 'Roboto Condensed', sans-serif;
+			}
+
+			p {
+				display: block;
+				font-size: 12px;
+				line-height: 1.5;
+				text-align: right;
+				margin-top: 40px;
+				@include span(9 of 12 last);
+
+
+			}
+		}
+	}
+}

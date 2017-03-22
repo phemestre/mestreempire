@@ -1,0 +1,66 @@
+.banner_wrapper {
+	position: relative;
+	// background: center top url('http://kingofwallpapers.com/fashion-wallpaper/fashion-wallpaper-011.jpg');
+	background-size: cover;
+
+	&.banner_extended {
+		.banner_wrapper_inner {
+			height: 100vh;
+		}
+	}
+
+	&.banner_short {
+		.banner_wrapper_inner {
+			height: 450px;
+		}
+	}
+
+	.banner_wrapper_inner {
+		position: relative;
+		max-width: $layout-width;
+		height: 700px;
+		margin: auto;
+		
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		background: rgba(0,0,0,0.5);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.25));
+	}
+
+	.social_icon_wrapper {
+		position: absolute;
+		bottom: 0;
+		left: 0px;
+		z-index: 10;
+	}
+	.social_list_wrapper {
+		position: absolute;
+		top: 35%;
+		left: 0px;
+		z-index: 10;
+		transform: rotate(90deg);
+		transform-origin: bottom left;
+		
+		ul {
+			li {
+				// transform: rotate(90deg);
+			}
+		}
+	}
+}

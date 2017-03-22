@@ -1,0 +1,12 @@
+node_modules/
+bower_components/
+npm-debug.log
+.DS_Store
+latest-change.txt
+.sass-cache/*
+/sass-cache
+styles.css.map
+styles.css
+Thumbs.db
+sassdoc/
+.github

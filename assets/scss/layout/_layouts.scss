@@ -1,0 +1,168 @@
+html {
+	
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+.main {
+	border: 1px solid #ccc;
+	margin: auto;
+}
+
+.inner {
+	// padding: 20px;
+
+}
+
+// Header
+
+.header_wrapper {
+	.header_wrapper_inner {
+		
+	}
+}
+
+// Main Nav
+
+.main_nav_wrapper {
+	display: none;
+	@include susy-breakpoint($bp-md, $susy) {
+		display: block;
+	}
+	.main_nav_wrapper_inner {
+
+	}
+}
+
+// Mobile Nav
+
+.mobile_nav_wrapper {
+	display: block;
+	@include susy-breakpoint($bp-md, $susy) {
+		display: none;
+	}
+	.main_nav_wrapper_inner {
+
+	}
+}
+
+// Banner
+
+.banner_wrapper {
+	
+}
+
+// Content Prefix
+
+.content_prefix_wrapper {
+	.content_prefix_wrapper_inner {
+		width: $layout_width;
+		margin: auto;
+		@include container();
+	}
+
+
+}
+
+// Content
+
+.content_wrapper {
+	.content_wrapper_inner {
+		width: $layout_width;
+		margin: 20px auto;
+	}
+	.content {
+		// border: 1px solid #ccc;
+		.inner {
+			position: relative;
+			@include container();
+
+		}
+	}
+}
+
+// Content + Sidebar
+
+.content_sidebar_wrapper {
+
+	.content_sidebar_wrapper_inner {
+		width: $layout_width;
+		margin: 20px auto;
+		@include container();
+	}
+
+	.content {
+		.inner {
+			position: relative;
+			@include container();
+			
+		}
+	}
+
+	.sidebar {
+		.inner {
+			padding: 0px 20px;
+		}
+	}
+
+	&.sidebar_right {
+		.content {
+			@include susy-breakpoint($bp-md, $susy) {
+				@include span( 9 of 12 );
+			}
+		}
+		.sidebar {
+			display: none;
+			@include susy-breakpoint($bp-md, $susy) {
+				@include span( 3 of 12 last);
+				display: block;
+			}
+		}
+	}
+	&.sidebar_left {
+		.sidebar {
+			display: none;
+			@include susy-breakpoint($bp-md, $susy) {
+				@include span( 3 of 12);
+				display: block;
+			}
+		}
+		.content {
+			@include susy-breakpoint($bp-md, $susy) {
+				@include span( 9 of 12 last);
+			}
+		}
+	}
+}
+
+// Footer Extended
+
+
+.footer_extended_wrapper {
+	.footer_extended_wrapper_inner {
+		width: $layout_width;
+		margin: auto;
+		.footer_extended {
+			.inner {
+				@include container();
+			}
+		}
+	}
+}
+
+// Footer
+
+.footer_wrapper {
+	.footer_wrapper_inner {
+		width: $layout_width;
+		margin: auto;
+		.footer {
+			.inner {
+
+			}
+		}
+	}
+}

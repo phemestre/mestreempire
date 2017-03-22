@@ -1,0 +1,305 @@
+
+/* ==========================================================================
+   Susy Set Up
+   ========================================================================== */
+@import '../../node_modules/susy/sass/susy';
+
+* {
+    box-sizing: border-box;
+}
+
+$susy: (
+    columns: 12,
+    container: 100%,
+    gutters: .25,
+    global-box-sizing: border-box,
+    debug: ( image: hide )
+ );
+
+$bp-sm: 30em;
+$bp-md: 47em;
+$bp-lg: 75em;
+
+$breakpoint-no-query-fallbacks: true;
+
+// Susy Layout & Debug
+// ========================================================================== 
+
+.susy-layout {
+    position: relative;
+    overflow: hidden;
+
+    .debug {
+        @include container();
+
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        .col {
+            @include span( 1 of 12 );
+
+            height: 100vh;
+            background: rgba( 0,  0,  0, .05 );
+            overflow: hidden;
+
+            &.last {
+                @include span( 1  of 12 last );
+            }
+        }
+    }
+
+    .row {
+        @include container();
+
+        position: relative;
+        z-index: 1;
+        margin: gutter() 0;
+
+        .col {
+    
+            line-height: 48px;
+            text-align: center;
+
+        }
+    }
+}
+
+.col-sm-1 { @include span( 1 of 12 ); }
+.col-sm-2 { @include span( 2 of 12 ); }
+.col-sm-3 { @include span( 3 of 12 ); }
+.col-sm-4 { @include span( 4 of 12 ); }
+.col-sm-5 { @include span( 5 of 12 ); }
+.col-sm-6 { @include span( 6 of 12 ); }
+.col-sm-7 { @include span( 7 of 12 ); }
+.col-sm-8 { @include span( 8 of 12 ); }
+.col-sm-9 { @include span( 9 of 12 );}
+.col-sm-10 { @include span( 10 of 12 ); }
+.col-sm-11 { @include span( 11 of 12 ); }
+.col-sm-12 { @include span( 12 of 12 ); }
+
+/* Last Column */
+.col-sm-1-last { @include span( 1 of 12 last ); }
+.col-sm-2-last { @include span( 2 of 12 last ); }
+.col-sm-3-last { @include span( 3 of 12 last ); }
+.col-sm-4-last { @include span( 4 of 12 last ); }
+.col-sm-5-last { @include span( 5 of 12 last ); }
+.col-sm-6-last { @include span( 6 of 12 last ); }
+.col-sm-7-last { @include span( 7 of 12 last ); }
+.col-sm-8-last { @include span( 8 of 12 last ); }
+.col-sm-9-last { @include span( 9 of 12 last );}
+.col-sm-10-last { @include span( 10 of 12 last ); }
+.col-sm-11-last { @include span( 11 of 12 last ); }
+.col-sm-12-last { @include span( 12 of 12 last ); }
+
+/* Half */
+.col-half { @include span( 6 of 12 ); }
+
+/* Column Push / Offset */
+.col-sm-push-1 { @include push( 1 ); }
+.col-sm-push-2 { @include push( 2 ); }
+.col-sm-push-3 { @include push( 3 ); }
+.col-sm-push-4 { @include push( 4 ); }
+.col-sm-push-5 { @include push( 5 ); }
+.col-sm-push-6 { @include push( 6 ); }
+.col-sm-push-7 { @include push( 7 ); }
+.col-sm-push-8 { @include push( 8 ); }
+.col-sm-push-9 { @include push( 9 ); }
+.col-sm-push-10 { @include push( 10 ); }
+.col-sm-push-11 { @include push( 11 ); }
+
+/* Column Pull / Offset */
+.col-sm-pull-1 { @include pull( 1 ); }
+.col-sm-pull-2 { @include pull( 2 ); }
+.col-sm-pull-3 { @include pull( 3 ); }
+.col-sm-pull-4 { @include pull( 4 ); }
+.col-sm-pull-5 { @include pull( 5 ); }
+.col-sm-pull-6 { @include pull( 6 ); }
+.col-sm-pull-7 { @include pull( 7 ); }
+.col-sm-pull-8 { @include pull( 8 ); }
+.col-sm-pull-9 { @include pull( 9 ); }
+.col-sm-pull-10 { @include pull( 10 ); }
+.col-sm-pull-11 { @include pull( 11 ); }
+
+// Breakpoint: Small
+// ========================================================================== 
+@include susy-breakpoint($bp-sm, $susy) {
+    .col-sm-1 { @include span( 1 of 12 ); }
+    .col-sm-2 { @include span( 2 of 12 ); }
+    .col-sm-3 { @include span( 3 of 12 ); }
+    .col-sm-4 { @include span( 4 of 12 ); }
+    .col-sm-5 { @include span( 5 of 12 ); }
+    .col-sm-6 { @include span( 6 of 12 ); }
+    .col-sm-7 { @include span( 7 of 12 ); }
+    .col-sm-8 { @include span( 8 of 12 ); }
+    .col-sm-9 { @include span( 9 of 12 );}
+    .col-sm-10 { @include span( 10 of 12 ); }
+    .col-sm-11 { @include span( 11 of 12 ); }
+    .col-sm-12 { @include span( 12 of 12 ); }
+
+    /* Last Column */
+    .col-sm-1-last { @include span( 1 of 12 last ); }
+    .col-sm-2-last { @include span( 2 of 12 last ); }
+    .col-sm-3-last { @include span( 3 of 12 last ); }
+    .col-sm-4-last { @include span( 4 of 12 last ); }
+    .col-sm-5-last { @include span( 5 of 12 last ); }
+    .col-sm-6-last { @include span( 6 of 12 last ); }
+    .col-sm-7-last { @include span( 7 of 12 last ); }
+    .col-sm-8-last { @include span( 8 of 12 last ); }
+    .col-sm-9-last { @include span( 9 of 12 last );}
+    .col-sm-10-last { @include span( 10 of 12 last ); }
+    .col-sm-11-last { @include span( 11 of 12 last ); }
+    .col-sm-12-last { @include span( 12 of 12 last ); }
+
+    /* Half */
+    .col-half { @include span( 6 of 12 ); }
+
+    /* Column Push / Offset */
+    .col-sm-push-1 { @include push( 1 ); }
+    .col-sm-push-2 { @include push( 2 ); }
+    .col-sm-push-3 { @include push( 3 ); }
+    .col-sm-push-4 { @include push( 4 ); }
+    .col-sm-push-5 { @include push( 5 ); }
+    .col-sm-push-6 { @include push( 6 ); }
+    .col-sm-push-7 { @include push( 7 ); }
+    .col-sm-push-8 { @include push( 8 ); }
+    .col-sm-push-9 { @include push( 9 ); }
+    .col-sm-push-10 { @include push( 10 ); }
+    .col-sm-push-11 { @include push( 11 ); }
+
+    /* Column Pull / Offset */
+    .col-sm-pull-1 { @include pull( 1 ); }
+    .col-sm-pull-2 { @include pull( 2 ); }
+    .col-sm-pull-3 { @include pull( 3 ); }
+    .col-sm-pull-4 { @include pull( 4 ); }
+    .col-sm-pull-5 { @include pull( 5 ); }
+    .col-sm-pull-6 { @include pull( 6 ); }
+    .col-sm-pull-7 { @include pull( 7 ); }
+    .col-sm-pull-8 { @include pull( 8 ); }
+    .col-sm-pull-9 { @include pull( 9 ); }
+    .col-sm-pull-10 { @include pull( 10 ); }
+    .col-sm-pull-11 { @include pull( 11 ); }
+}
+
+// Breakpoint: Medium
+// ========================================================================== 
+@include susy-breakpoint($bp-md, $susy) {
+    .col-md-1 { @include span( 1 of 12 ); }
+    .col-md-2 { @include span( 2 of 12 ); }
+    .col-md-3 { @include span( 3 of 12 ); }
+    .col-md-4 { @include span( 4 of 12 ); }
+    .col-md-5 { @include span( 5 of 12 ); }
+    .col-md-6 { @include span( 6 of 12 ); }
+    .col-md-7 { @include span( 7 of 12 ); }
+    .col-md-8 { @include span( 8 of 12 ); }
+    .col-md-9 { @include span( 9 of 12 );}
+    .col-md-10 { @include span( 10 of 12 ); }
+    .col-md-11 { @include span( 11 of 12 ); }
+    .col-md-12 { @include span( 12 of 12 ); }
+
+    /* Last Column */
+    .col-md-1-last { @include span( 1 of 12 last ); }
+    .col-md-2-last { @include span( 2 of 12 last ); }
+    .col-md-3-last { @include span( 3 of 12 last ); }
+    .col-md-4-last { @include span( 4 of 12 last ); }
+    .col-md-5-last { @include span( 5 of 12 last ); }
+    .col-md-6-last { @include span( 6 of 12 last ); }
+    .col-md-7-last { @include span( 7 of 12 last ); }
+    .col-md-8-last { @include span( 8 of 12 last ); }
+    .col-md-9-last { @include span( 9 of 12 last );}
+    .col-md-10-last { @include span( 10 of 12 last ); }
+    .col-md-11-last { @include span( 11 of 12 last ); }
+    .col-md-12-last { @include span( 12 of 12 last ); }
+
+    /* Half */
+    .col-half { @include span( 6 of 12 ); }
+
+    /* Column Push / offset */
+    .col-md-push-1 { @include push( 1 ); }
+    .col-md-push-2 { @include push( 2 ); }
+    .col-md-push-3 { @include push( 3 ); }
+    .col-md-push-4 { @include push( 4 ); }
+    .col-md-push-5 { @include push( 5 ); }
+    .col-md-push-6 { @include push( 6 ); }
+    .col-md-push-7 { @include push( 7 ); }
+    .col-md-push-8 { @include push( 8 ); }
+    .col-md-push-9 { @include push( 9 ); }
+    .col-md-push-10 { @include push( 10 ); }
+    .col-md-push-11 { @include push( 11 ); }
+
+    /* Column Pull / offset */
+    .col-md-pull-1 { @include pull( 1 ); }
+    .col-md-pull-2 { @include pull( 2 ); }
+    .col-md-pull-3 { @include pull( 3 ); }
+    .col-md-pull-4 { @include pull( 4 ); }
+    .col-md-pull-5 { @include pull( 5 ); }
+    .col-md-pull-6 { @include pull( 6 ); }
+    .col-md-pull-7 { @include pull( 7 ); }
+    .col-md-pull-8 { @include pull( 8 ); }
+    .col-md-pull-9 { @include pull( 9 ); }
+    .col-md-pull-10 { @include pull( 10 ); }
+    .col-md-pull-11 { @include pull( 11 ); }
+}
+
+// Breakpoint: Large
+// ========================================================================== 
+
+@include susy-breakpoint($bp-lg, $susy) { 
+    .col-lg-1 { @include span( 1 of 12 ); }
+    .col-lg-2 { @include span( 2 of 12 ); }
+    .col-lg-3 { @include span( 3 of 12 ); }
+    .col-lg-4 { @include span( 4 of 12 ); }
+    .col-lg-5 { @include span( 5 of 12 ); }
+    .col-lg-6 { @include span( 6 of 12 ); }
+    .col-lg-7 { @include span( 7 of 12 ); }
+    .col-lg-8 { @include span( 8 of 12 ); }
+    .col-lg-9 { @include span( 9 of 12 );}
+    .col-lg-10 { @include span( 10 of 12 ); }
+    .col-lg-11 { @include span( 11 of 12 ); }
+    .col-lg-12 { @include span( 12 of 12 ); }
+
+    /* Last Column */
+    .col-lg-1-last { @include span( 1 of 12 last ); }
+    .col-lg-2-last { @include span( 2 of 12 last ); }
+    .col-lg-3-last { @include span( 3 of 12 last ); }
+    .col-lg-4-last { @include span( 4 of 12 last ); }
+    .col-lg-5-last { @include span( 5 of 12 last ); }
+    .col-lg-6-last { @include span( 6 of 12 last ); }
+    .col-lg-7-last { @include span( 7 of 12 last ); }
+    .col-lg-8-last { @include span( 8 of 12 last ); }
+    .col-lg-9-last { @include span( 9 of 12 last );}
+    .col-lg-10-last { @include span( 10 of 12 last ); }
+    .col-lg-11-last { @include span( 11 of 12 last ); }
+    .col-lg-12-last { @include span( 12 of 12 last ); }
+
+    /* Half */
+    .col-half { @include span( 6 of 12 ); }
+
+    /* Column Push / Offset */
+    .col-lg-push-1 { @include push( 1 ); }
+    .col-lg-push-2 { @include push( 2 ); }
+    .col-lg-push-3 { @include push( 3 ); }
+    .col-lg-push-4 { @include push( 4 ); }
+    .col-lg-push-5 { @include push( 5 ); }
+    .col-lg-push-6 { @include push( 6 ); }
+    .col-lg-push-7 { @include push( 7 ); }
+    .col-lg-push-8 { @include push( 8 ); }
+    .col-lg-push-9 { @include push( 9 ); }
+    .col-lg-push-10 { @include push( 10 ); }
+    .col-lg-push-11 { @include push( 11 ); }
+
+    /* Column Pull / Offset */
+    .col-lg-pull-1 { @include pull( 1 ); }
+    .col-lg-pull-2 { @include pull( 2 ); }
+    .col-lg-pull-3 { @include pull( 3 ); }
+    .col-lg-pull-4 { @include pull( 4 ); }
+    .col-lg-pull-5 { @include pull( 5 ); }
+    .col-lg-pull-6 { @include pull( 6 ); }
+    .col-lg-pull-7 { @include pull( 7 ); }
+    .col-lg-pull-8 { @include pull( 8 ); }
+    .col-lg-pull-9 { @include pull( 9 ); }
+    .col-lg-pull-10 { @include pull( 10 ); }
+    .col-lg-pull-11 { @include pull( 11 ); }
+}

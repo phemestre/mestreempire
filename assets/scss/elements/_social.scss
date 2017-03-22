@@ -1,0 +1,49 @@
+.social_icon_wrapper {
+
+	.social_icon_wrapper_inner {	
+		
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			font-size: 18px;
+			line-height: 40px;
+			margin: 0 10px;
+
+			a {
+				color: $white;
+			}
+		}
+	}
+}
+
+.social_list_wrapper {
+
+	.social_list_wrapper_inner {	
+		
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			font-size: 12px;
+			line-height: 1.5;
+			margin: 0 10px;
+			text-transform: uppercase;
+
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -11,7 +11,7 @@ var livereload = require(  'gulp-livereload'  );
 
 // Gulp Sass Task 
 gulp.task( 'sass', function() {
-  gulp.src( 'assets/sass/**/*.scss' )  
+  gulp.src( 'assets/scss/**/*.scss' )  
     .pipe( sourcemaps.init() ) // Initializes sourcemaps
     .pipe( sassdoc() )
     .pipe( sass().on( 'error', sass.logError ) )
@@ -22,7 +22,7 @@ gulp.task( 'sass', function() {
 } );
 
 gulp.task( 'watch', function() {
-  gulp.watch( 'assets/sass/**/*.scss', [ 'sass' ] ) ;
+  gulp.watch( 'assets/scss/**/*.scss', [ 'sass' ] ) ;
   // livereload.listen();
 } );
 

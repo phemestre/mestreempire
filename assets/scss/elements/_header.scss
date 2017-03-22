@@ -1,0 +1,45 @@
+.header_wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: rgba(0,0,0,0.2);
+
+	.header_wrapper_inner {
+		max-width: $layout-width;
+		height: 36px;
+		margin: auto;
+		text-align: left;
+
+		ul.header_nav {
+			display: inline-block;
+			margin: 0px auto;
+			padding: 0px;
+			line-height: 0;
+			@include container();
+
+			li {
+				display: inline-block;
+				margin: 0px 10px;
+
+				a {
+					display: inline-block;
+					line-height: 36px;
+					color: #ffffff;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 12px;
+				}
+			}
+
+			&.left {
+				@include span( 3 of 12);
+			}
+			&.right {
+				@include span( 3 of 12 last);
+				text-align: right;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.btn {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0px 20px;
+	margin: 5px;
+	border: none;
+	border-radius: 3px;
+	color: $charcoal;
+	background: $smoke;
+	box-sizing: border-box;
+
+	&:hover {
+		color: $white;
+		background: $charcoal;
+		cursor: pointer;
+	}
+
+	// Alternative
+
+	&.btn-alt {
+		background: $charcoal;
+		color: $white;
+
+		&:hover {
+			background: $smoke;
+			color: $charcoal;
+		}
+	}
+
+	// Inverse
+
+	&.btn-inv {
+		background: $white;
+		color: $charcoal;
+
+		&:hover {
+			background: $smoke;
+			color: $charcoal;
+		}
+	}
+}
